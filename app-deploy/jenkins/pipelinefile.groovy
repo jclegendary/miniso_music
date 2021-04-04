@@ -41,7 +41,7 @@ pipeline {
               userRemoteConfigs: [
                 [
                   credentialsId: 'git hub',
-                  url: 'ggit@github.com:jclegendary/miniso_music.git'
+                  url: 'git@github.com:jclegendary/miniso_music.git'
                 ]
               ]
           ])
