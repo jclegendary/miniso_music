@@ -18,7 +18,7 @@ pipeline {
     )
     choice (
       name: 'server',
-      choices: '172.17.6.235\n106.15.249.132',
+      choices: '106.15.249.132',
       description: '部暑服务器'
     )
   }
@@ -109,7 +109,7 @@ pipeline {
                   docker rm -f miniso_audio
                   docker rmi miniso_audio
                   docker build ./ -t miniso_audio
-                  docker run -itd --restart=always --network frontend_net --name miniso_audio -p 8005:80 miniso_audio
+                  docker run -itd --restart=always --network frontend_net --name miniso_audio -p 8002:80 miniso_audio
 
                   rm -rf /home/docker/miniso_audio/*
                 ''', execTimeout: 12000000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)]
