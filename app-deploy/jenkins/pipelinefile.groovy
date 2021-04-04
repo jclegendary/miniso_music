@@ -106,8 +106,8 @@ pipeline {
                   cd /home/docker/miniso_audio/
                   tar -xvf deploy.tar.gz
                   rm -f deploy.tar.gz
-                  docker stop miniso_audio && docker rm -f miniso_audio
-                  docker stop miniso_audio && docker rmi miniso_audio
+                  docker rm -f miniso_audio
+                  docker rmi miniso_audio
                   docker build ./ -t miniso_audio
                   docker run -itd --restart=always --name miniso_audio -p 8002:80 miniso_audio
 
