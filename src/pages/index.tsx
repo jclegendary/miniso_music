@@ -8,6 +8,7 @@ import m3 from '@/assets/music/m3.mp3';
 import m2 from '@/assets/music/m2.mp3';
 import m1 from '@/assets/music/m1.mp3';
 
+console.log(123);
 // 组件库
 export const useWinSize = () => {
   const [size, setSize] = React.useState({
